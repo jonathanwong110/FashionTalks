@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 class PostsContainer extends Component {
     render() {
         return (
-            <Posts posts={posts}/>
+            <Posts posts={this.props.posts}/>
         )
     }
 }

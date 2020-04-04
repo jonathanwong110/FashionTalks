@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Posts from './Posts'
+import Post from './Post'
 
 class Posts extends Component {
 
@@ -7,7 +7,7 @@ class Posts extends Component {
     return(
       <ul>
         {this.props.posts.map(post => 
-          <post key={post.id} post={post}/>
+          <Post key={post.id} post={post}/>
         )}
       </ul>
     );
