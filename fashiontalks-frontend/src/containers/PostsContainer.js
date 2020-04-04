@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 import Posts from '../components/posts/Posts'
 import { connect } from 'react-redux'
+import { loadPosts } from '../actions/postsActions'
 
 class PostsContainer extends Component {
     render() {
         return (
-            <Posts posts={this.props.posts}/>
+            <Posts loadPosts={this.props.loadPosts} posts={this.props.posts}/>
         )
     }
 }
@@ -16,8 +17,10 @@ const mapStateToProps = state => {
     }
 }
 
-const mapDispatchToProps = state => {
-    null
+const mapDispatchToProps = dispatch => {
+    return {
+    loadPosts: () => dispatch(loadPosts())
+    }
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(PostsContainer)
