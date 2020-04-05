@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Post from './Post'
+import { CardDeck, Container } from 'react-bootstrap'
 
 class Posts extends Component {
   
@@ -9,12 +10,13 @@ class Posts extends Component {
 
   render() {
     return(
-      <ul>
-        <div>{console.log(this.props.posts)}</div>
-        {this.props.posts.map(post => 
-          <Post key={post.id} post={post}/>
-        )}
-      </ul>
+      <CardDeck>
+        <Container>
+          {this.props.posts.map(post => 
+            <Post key={post.id} post={post}/>
+          )}
+        </Container>
+      </CardDeck>
     );
   }
 };
