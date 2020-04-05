@@ -6,7 +6,7 @@ import { loadSections } from '../actions/sectionsActions'
 class SectionsContainer extends Component {
     render() {
         return (
-            <Sections loadSections={this.props.loadSections} posts={this.props.sections}/>
+            <Sections loadSections={this.props.loadSections} sections={this.props.sections}/>
         )
     }
 }

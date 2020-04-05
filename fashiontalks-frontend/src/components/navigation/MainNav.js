@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom'
+import Sections from '../sections/Sections'
 
 class MainNav extends Component {
 
@@ -19,6 +20,7 @@ class MainNav extends Component {
             <Link to="/tech" className="white-logo">Tech</Link>
             </Nav>
             </Navbar.Collapse>
+            <Sections sections={this.props}/>
         </Navbar>
         <br></br>
         <br></br>
