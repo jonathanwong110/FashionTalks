@@ -42,3 +42,13 @@
   top: 0;
   right: 0;
 }
+
+.signup {
+  position: absolute;
+  top: 0;
+  right: 200px;
+}
+
+.card-deck {
+  background-color:	rgb(48,48,48)
+}
