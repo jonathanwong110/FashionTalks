@@ -20,10 +20,13 @@ class MainNav extends Component {
               <Link to="/shoes" className="white-logo">Shoes</Link>
             </Nav>
             <Nav className="mr-auto">
-            <Link to="/entertainment" className="white-logo">Entertainment</Link>
+              <Link to="/entertainment" className="white-logo">Entertainment</Link>
             </Nav>
             <Nav className="mr-auto">
-            <Link to="/tech" className="white-logo">Tech</Link>
+              <Link to="/tech" className="white-logo">Tech</Link>
+            </Nav>
+            <Nav id="login">
+              <Link to="signup" className="white-logo">Sign In</Link>
             </Nav>
         </Navbar>
         <br></br>
