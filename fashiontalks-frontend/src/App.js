@@ -3,7 +3,7 @@ import './App.css';
 import { BrowserRouter } from 'react-router-dom'
 import MainNav from './components/navigation/MainNav'
 import PostsContainer from './containers/PostsContainer'
-import SectionsContainer from './containers/SectionsContainer'
+// import SectionsContainer from './containers/SectionsContainer'
 
 class App extends Component {
   
@@ -13,7 +13,7 @@ class App extends Component {
       <>
       <BrowserRouter>
         <MainNav/>
-        <SectionsContainer/>
+        {/* <SectionsContainer/> */}
         <PostsContainer/>
       </BrowserRouter>
       </>
