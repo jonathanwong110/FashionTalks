@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Navbar, Nav } from 'react-bootstrap';
+import { Navbar, Nav, Form, FormControl } from 'react-bootstrap';
 import { Link } from 'react-router-dom'
 // import Sections from '../sections/Sections'
 
@@ -25,6 +25,9 @@ class MainNav extends Component {
             <Nav className="mr-auto">
               <Link to="/tech" className="white-logo">Tech</Link>
             </Nav>
+            <Form inline className="mr-auto">
+              <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+            </Form>
             <Nav id="login">
               <Link to="signup" className="white-logo">Sign In</Link>
             </Nav>
