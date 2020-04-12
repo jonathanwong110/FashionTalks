@@ -1,5 +1,4 @@
-class SectionSerializer
-  include FastJsonapi::ObjectSerializer
+class SectionSerializer < ActiveModel::Serializer
   attributes :name
   has_many :posts
 end
