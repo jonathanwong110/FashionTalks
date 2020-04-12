@@ -1,9 +1,9 @@
 User.create([
-    { username: "JW", email: "123@testing.com", password_digest: "12345" },
-    { username: "OM", email: "123@testing.com", password_digest: "12345" },
-    { username: "CL", email: "123@testing.com", password_digest: "12345" },
-    { username: "KL", email: "123@testing.com", password_digest: "12345" },
-    { username: "AA", email: "123@testing.com", password_digest: "12345" }
+    { username: "JW", email: "123@testing.com", password: "12345" },
+    { username: "OM", email: "123@testing.com", password: "12345" },
+    { username: "CL", email: "123@testing.com", password: "12345" },
+    { username: "KL", email: "123@testing.com", password: "12345" },
+    { username: "AA", email: "123@testing.com", password: "12345" }
 ])
 
 Section.create([
