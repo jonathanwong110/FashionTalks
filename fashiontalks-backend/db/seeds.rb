@@ -7,10 +7,10 @@ User.create([
 ])
 
 Section.create([
-    { name: "Clothing" },
-    { name: "Shoes" },
-    { name: "Entertainment" },
-    { name: "Tech" }
+    { name: "clothing" },
+    { name: "shoes" },
+    { name: "entertainment" },
+    { name: "tech" }
 ])
 
 Post.create([

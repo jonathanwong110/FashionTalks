@@ -1,5 +1,6 @@
 import React from 'react'
 import { Card } from 'react-bootstrap';
+import { Link } from 'react-router-dom'
 
 export default function Post(props) {
 
@@ -10,7 +11,9 @@ export default function Post(props) {
             <br></br>
             <Card style={{ height: '200px', margin: '20px' }} className="bg-dark text-white">
                 <Card.Body>
-                    <Card.Text>{post.section.name}</Card.Text>
+                    <Link to={`/sections/${post.section.name}`} style={{ color: 'white', textDecoration: 'none' }} className="post_caption"> {post.section.name} </Link>
+                    <br></br>
+                    <br></br>
                     <Card.Title>{post.title}</Card.Title>
                     <Card.Text className="post_caption">
                         {post.comments.length} comments
