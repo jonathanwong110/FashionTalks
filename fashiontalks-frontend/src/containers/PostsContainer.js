@@ -9,22 +9,22 @@ class PostsContainer extends Component {
     constructor() {
         super()
         this.state = {
-          filterBy: ""
+            filterBy: ""
         }
-      }
-    
-      filterBy = section => {
+    }
+
+    filterBy = section => {
         this.setState({
-          filterBy: section === this.state.filterBy ? "" : section
+            filterBy: section === this.state.filterBy ? "" : section
         })
-      }
-    
+    }
+
 
     render() {
         return (
             <>
-            <MainNav filterBy={this.filterBy}/>
-            <Posts loadPosts={this.props.loadPosts} posts={this.props.posts}/>
+                <MainNav filterBy={this.filterBy} />
+                <Posts filterBy={this.state.filterBy} loadPosts={this.props.loadPosts} posts={this.props.posts} />
             </>
         )
     }

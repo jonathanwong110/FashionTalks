@@ -6,7 +6,6 @@ export default function MainNav(props) {
 
   return (
     <>
-    {console.log('props', props)}
       <Navbar collapseOnSelect bg="dark" variant="dark" sticky="top" >
         <Nav className="mr-auto" onClick={() => props.filterBy('')}>
           <Link to="/" style={{ color: 'white', textDecoration: 'none' }} > FashionTalks </Link>
