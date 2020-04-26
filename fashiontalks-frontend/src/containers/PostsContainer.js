@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import Posts from '../components/posts/Posts'
-import MainNav from '../components/navigation/MainNav'
+import SectionNav from '../components/navigation/SectionNav'
 import { connect } from 'react-redux'
 import { loadPosts } from '../actions/postsActions'
+import { Container, Row, Col } from 'react-bootstrap'
 
 class PostsContainer extends Component {
 
@@ -23,8 +24,19 @@ class PostsContainer extends Component {
     render() {
         return (
             <>
-                <MainNav filterBy={this.filterBy} />
-                <Posts filterBy={this.state.filterBy} loadPosts={this.props.loadPosts} posts={this.props.posts} />
+                <Container>
+                    <Row>
+                        <Col>
+                            <SectionNav filterBy={this.filterBy} />
+                        </Col>
+                    </Row>
+                    <br></br>
+                    <Row>
+                        <Col>
+                            <Posts filterBy={this.state.filterBy} loadPosts={this.props.loadPosts} posts={this.props.posts} />
+                        </Col>
+                    </Row>
+                </Container>
             </>
         )
     }
