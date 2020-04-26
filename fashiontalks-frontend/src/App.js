@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter, Route } from 'react-router-dom'
 import PostsContainer from './containers/PostsContainer'
+import Login from './components/Login'
 
 class App extends Component {
 
@@ -10,7 +11,8 @@ class App extends Component {
     return (
       <>
         <BrowserRouter>
-          <PostsContainer />
+          <Route exact path="/"> <PostsContainer /> </Route>
+          <Route exact path="/login"> <Login /> </Route>
         </BrowserRouter>
       </>
     )
