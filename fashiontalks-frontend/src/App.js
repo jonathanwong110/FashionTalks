@@ -13,10 +13,16 @@ class App extends Component {
     return (
       <>
         <BrowserRouter>
-        <MainNav/>
-          <Route exact path="/"> <PostsContainer /> </Route>
-          <Route exact path="/login"> <Login/> </Route>
-          <Route exact path="/signup"> <Signup/> </Route>
+          <div className="App">
+            <MainNav />
+            <Route exact path="/"> <PostsContainer /> </Route>
+            <Route exact path="/login"> <Login /> </Route>
+            <Route exact path="/signup"> <Signup /> </Route>
+            <Route exact path="/sections/clothing"> <PostsContainer /> </Route>
+            <Route exact path="/sections/shoes"> <PostsContainer /> </Route>
+            <Route exact path="/sections/entertainment"> <PostsContainer /> </Route>
+            <Route exact path="/sections/tech"> <PostsContainer /> </Route>
+          </div>
         </BrowserRouter>
       </>
     )

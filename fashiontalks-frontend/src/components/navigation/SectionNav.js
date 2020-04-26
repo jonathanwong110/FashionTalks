@@ -2,11 +2,14 @@ import React from 'react';
 import { Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom'
 
-export default function MainNav(props) {
+export default function SectionNav(props) {
 
   return (
     <>
-      <Navbar collapseOnSelect bg="dark" variant="dark" sticky="top" >
+      <Navbar collapseOnSelect sticky="top" >
+        <Nav className="mr-auto" onClick={() => props.filterBy('')}>
+          <Link to="/" style={{ color: 'white', textDecoration: 'none' }} > All </Link>
+        </Nav>
         <Nav className="mr-auto" onClick={() => props.filterBy('clothing')}>
           <Link to="/sections/clothing" style={{ color: 'white', textDecoration: 'none' }} > Clothing </Link>
         </Nav>

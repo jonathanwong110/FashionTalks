@@ -24,6 +24,7 @@ class PostsContainer extends Component {
     render() {
         return (
             <>
+            <br></br>
                 <Container>
                     <Row>
                         <Col>
