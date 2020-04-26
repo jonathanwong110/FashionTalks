@@ -25,9 +25,10 @@ class Login extends Component {
     }
 
     render() {
+
         return (
             <Form className="login-form" onSubmit={e => this.handleSubmit(e)}>
-                <Form.Group as={Col} controlId="formBasicEmail">
+                <Form.Group as={Col} controlId="formBasicUsername">
                     <Form.Label>Username: </Form.Label>
                     <input type="text" name="username" placeholder="Username" onChange={e => this.handleChange(e)} value={this.state.username}></input>
                 </Form.Group>
@@ -42,7 +43,6 @@ class Login extends Component {
             </Form>
         )
     }
-
 }
 
 export default Login
