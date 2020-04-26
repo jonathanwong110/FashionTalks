@@ -43,6 +43,18 @@
   right: 0;
 }
 
+.login-form {
+  margin: auto;
+  text-align: center;
+  border: 3px solid grey;
+  padding: 10px;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -100px;
+}
+
 .signup {
   position: absolute;
   top: 0;

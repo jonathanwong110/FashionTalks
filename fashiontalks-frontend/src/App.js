@@ -3,6 +3,7 @@ import './App.css';
 import { BrowserRouter, Route } from 'react-router-dom'
 import PostsContainer from './containers/PostsContainer'
 import Login from './components/Login'
+import Signup from './components/Signup'
 
 class App extends Component {
 
@@ -13,6 +14,7 @@ class App extends Component {
         <BrowserRouter>
           <Route exact path="/"> <PostsContainer /> </Route>
           <Route exact path="/login"> <Login /> </Route>
+          <Route exact path="/signup"> <Signup /> </Route>
         </BrowserRouter>
       </>
     )
