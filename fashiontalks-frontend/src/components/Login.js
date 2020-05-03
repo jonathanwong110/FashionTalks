@@ -34,7 +34,7 @@ const Login = ({ loginFormData, updateLoginForm, login, history }) => {
                 <input type="text" name="password" placeholder="Password" onChange={handleChange} value={loginFormData.password}></input>
             </Form.Group>
             <Button variant="primary" type="submit">
-                Submit
+                Log In
                  </Button>
         </Form>
     )
