@@ -4,12 +4,14 @@ import managePosts from './reducers/managePosts.js'
 import manageComments from './reducers/manageComments.js'
 import manageSections from './reducers/manageSections.js'
 import thunk from 'redux-thunk'
+import manageLogin from './reducers/manageLogin.js'
 
 const reducer = combineReducers({
     users: manageUsers,
     posts: managePosts,
     comments: manageComments,
-    sections: manageSections
+    sections: manageSections,
+    manageLogin
 })
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

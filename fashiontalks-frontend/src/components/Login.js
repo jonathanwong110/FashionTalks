@@ -1,8 +1,11 @@
 import React from 'react';
+import { connect } from 'react-redux'
 import { Form, Button, Col } from 'react-bootstrap'
+import { updateLoginForm } from '../actions/loginAction.js'
+import { login } from "../actions/currentUserAction.js"
 
 
-const Login = ({ loginFormData, updateLoginForm }) => {
+const Login = ({ loginFormData, updateLoginForm, login, history }) => {
 
     const handleChange = (e) => {
         const { name, value } = e.target
@@ -13,12 +16,9 @@ const Login = ({ loginFormData, updateLoginForm }) => {
         updateLoginForm(updatedFormInfo)
     }
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        this.setState({
-            username: "",
-            password: ""
-        });
+    const handleSubmit = e => {
+        e.preventDefault()
+        login(loginFormData, history)
     }
 
 
@@ -40,4 +40,10 @@ const Login = ({ loginFormData, updateLoginForm }) => {
     )
 }
 
-export default Login
+const mapStateToProps = state => {
+    return {
+        loginFormData: state.manageLogin
+    }
+}
+
+export default connect(mapStateToProps, { updateLoginForm, login })(Login)
