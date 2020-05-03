@@ -1,22 +1,19 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Form, Button, Col } from 'react-bootstrap'
 
-class Login extends Component {
-    constructor() {
-        super()
-        this.state = {
-            username: "",
-            password: ""
+
+const Login = ({ loginFormData, updateLoginForm }) => {
+
+    const handleChange = (e) => {
+        const { name, value } = e.target
+        const updatedFormInfo = {
+            ...loginFormData,
+            [name]: value
         }
+        updateLoginForm(updatedFormInfo)
     }
 
-    handleChange = (e) => {
-        this.setState({
-            [e.target.name]: e.target.value
-        });
-    }
-
-    handleSubmit = (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
         this.setState({
             username: "",
@@ -24,25 +21,23 @@ class Login extends Component {
         });
     }
 
-    render() {
 
-        return (
-            <Form className="login-form" onSubmit={e => this.handleSubmit(e)}>
-                <Form.Group as={Col} controlId="formBasicUsername">
-                    <Form.Label>Username: </Form.Label>
-                    <input type="text" name="username" placeholder="Username" onChange={e => this.handleChange(e)} value={this.state.username}></input>
-                </Form.Group>
+    return (
+        <Form className="login-form" onSubmit={handleSubmit}>
+            <Form.Group as={Col} controlId="formBasicUsername">
+                <Form.Label>Username: </Form.Label>
+                <input type="text" name="username" placeholder="Username" onChange={handleChange} value={loginFormData.username}></input>
+            </Form.Group>
 
-                <Form.Group as={Col} controlId="formBasicPassword">
-                    <Form.Label>Password: </Form.Label>
-                    <input type="text" name="password" placeholder="Password" onChange={e => this.handleChange(e)} value={this.state.password}></input>
-                </Form.Group>
-                <Button variant="primary" type="submit">
-                    Submit
+            <Form.Group as={Col} controlId="formBasicPassword">
+                <Form.Label>Password: </Form.Label>
+                <input type="text" name="password" placeholder="Password" onChange={handleChange} value={loginFormData.password}></input>
+            </Form.Group>
+            <Button variant="primary" type="submit">
+                Submit
                  </Button>
-            </Form>
-        )
-    }
+        </Form>
+    )
 }
 
 export default Login
